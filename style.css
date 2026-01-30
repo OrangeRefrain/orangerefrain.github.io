@@ -186,10 +186,6 @@ header {
     font-weight: bold;
 }
 
-.authors {
-    font-size: 14px;
-}
-
 .news-list {
     display: grid;
     gap: 10px;
@@ -202,17 +198,17 @@ header {
 }
 
 .news-date {
-    width: 80px;
-    text-align: right;
+    width: 100px;
+    text-align: left;
     padding-right: 10px;
     white-space: nowrap;
     position: relative;
 }
 
-.news-date::after {
+.news-date::before {
     content: '✦';
     color: #E6D8AE;
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .news-content {
