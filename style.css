@@ -1,0 +1,288 @@
+/* style.css */
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000 url('/image/back.gif') repeat;
+    color: #FFFFFF;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* 链接样式 */
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:link {
+    color: #66FFFF;
+}
+
+a:visited {
+    color: #ccFFFF;
+}
+
+a:hover {
+    color: #FF99FF;
+    text-decoration: underline;
+}
+
+/* 头部样式 */
+header {
+    border: 2px solid #E6D8AE;
+    margin: 20px 0;
+    display: flex;
+    background: transparent;
+}
+
+.banner {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-right: 2px solid #E6D8AE;
+    background: transparent;
+}
+
+.banner img {
+    min-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.site-title {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: #FFC53B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 主要内容区域 */
+.main-content {
+    display: flex;
+    border: 2px solid #E6D8AE;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 10px;
+    border-right: 2px solid #E6D8AE;
+    background: transparent;
+}
+
+.main-section {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 侧边栏样式 */
+.last-update {
+    font-size: 16px;
+    color: #9999FF;
+    padding: 0px;
+    text-align: left;
+}
+
+.update-date {
+    font-size: 16px;
+}
+
+.menu-section {
+    margin: -6px 0px;
+}
+
+.menu-section h3 {
+    font-size: 18px;
+    color: #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.menu-section ul {
+    list-style: none;
+}
+
+.menu-section li {
+    margin: 4px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.menu-section li::before {
+    content: '✦';
+    color: #E6D8AE;
+    position: absolute;
+    left: 0;
+}
+
+.menu-section a {
+    font-size: 18px;
+}
+
+.menu-section:last-child ul {
+    margin-bottom: 5px;
+}
+
+/* 主内容区域 */
+.title-image {
+    margin-bottom: 20px;
+    max-width: 80%;
+    border: 1px solid #E6D8AE;
+}
+
+.title-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* 新闻区域 */
+.news-section {
+    border: 2px solid #E6D8AE;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+.news-header {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.news-title {
+    color: gold;
+    font-weight: bold;
+}
+
+.authors {
+    font-size: 14px;
+}
+
+.news-list {
+    display: grid;
+    gap: 10px;
+}
+
+.news-item {
+    display: flex;
+    font-size: 16px;
+    color: #FFFFEE;
+}
+
+.news-date {
+    width: 80px;
+    text-align: right;
+    padding-right: 10px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.news-date::after {
+    content: '✦';
+    color: #E6D8AE;
+    margin-left: 5px;
+}
+
+.news-content {
+    flex: 1;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin: 10px 0;
+    border-top: 0px solid #E6D8AE;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.orange-text {
+    color: #FFC53B;
+}
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #E6D8AE;
+    }
+    
+    .main-section {
+        min-height: 300px;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    .banner {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #E6D8AE;
+    }
+    
+    .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .news-item {
+        flex-direction: column;
+    }
+    
+    .news-date {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    
+    .menu-section h3 {
+        font-size: 16px;
+    }
+    
+    .menu-section a {
+        font-size: 16px;
+    }
+}

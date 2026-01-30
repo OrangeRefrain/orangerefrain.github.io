@@ -1,0 +1,391 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- HTML根元素，设置语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式视口设置 -->
+    <title>OrangeStar -- Anime Lyrics, Novels & Little Kits</title> <!-- 页面标题 -->
+    <style>
+        /* 基础样式 */
+        * { /* 通用选择器，重置所有元素默认样式 */
+            margin: 0; /* 清除外边距 */
+            padding: 0; /* 清除内边距 */
+            box-sizing: border-box; /* 盒模型设置为border-box */
+        }
+
+        body { /* 页面主体样式 */
+            background: #000000 url('pic/back.gif') repeat; /* 黑色背景+重复背景图 */
+            color: #FFFFFF; /* 白色文字 */
+            font-family: Tahoma, Arial, sans-serif; /* 字体栈 */
+            font-size: 16px; /* 基础字体大小 */
+            line-height: 1.5; /* 行高1.5倍 */
+        }
+
+        .container { /* 主要内容容器 */
+            max-width: 1080px; /* 最大宽度1080px */
+            margin: 0 auto; /* 水平居中 */
+            padding: 0 10px; /* 左右内边距 */
+        }
+
+        /* 链接样式 */
+        a { /* 超链接基础样式 */
+            text-decoration: none; /* 去除下划线 */
+            transition: color 0.3s; /* 颜色过渡动画 */
+        }
+
+        a:link { /* 未访问链接样式 */
+            color: #66FFFF; /* 浅蓝色 */
+        }
+
+        a:visited { /* 已访问链接样式 */
+            color: #ccFFFF; /* 更浅的蓝色 */
+        }
+
+        a:hover { /* 鼠标悬停样式 */
+            color: #FF99FF; /* 粉色 */
+            text-decoration: underline; /* 添加下划线 */
+        }
+
+        /* 头部样式 */
+        header { /* 页头容器 */
+            border: 2px solid #E6D8AE; /* 浅金色边框 */
+            margin: 20px 0; /* 上下外边距 */
+            display: flex; /* 弹性布局 */
+            background: transparent; /* 透明背景 */
+        }
+
+        .banner { /* 横幅区域 */
+            width: 200px; /* 固定宽度 */
+            display: flex; /* 弹性布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            padding: 0; /* 无内边距 */
+            border-right: 2px solid #E6D8AE; /* 右侧边框 */
+            background: transparent; /* 透明背景 */
+        }
+
+        .banner img { /* 横幅图片 */
+            min-width: 200px; /* 最小宽度 */
+            height: auto; /* 高度自适应 */
+            display: block; /* 块级显示 */
+        }
+
+        .site-title { /* 网站标题区域 */
+            flex: 1; /* 弹性填充剩余空间 */
+            text-align: center; /* 文字居中 */
+            padding: 10px; /* 内边距 */
+            color: #FFC53B; /* 橙色文字 */
+            display: flex; /* 弹性布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
+
+        /* 主要内容区域 */
+        .main-content { /* 主内容容器 */
+            display: flex; /* 弹性布局 */
+            border: 2px solid #E6D8AE; /* 浅金色边框 */
+            margin-bottom: 20px; /* 底部外边距 */
+            background: transparent; /* 透明背景 */
+        }
+
+        .sidebar { /* 侧边栏 */
+            width: 200px; /* 固定宽度 */
+            padding: 10px; /* 内边距 */
+            border-right: 2px solid #E6D8AE; /* 右侧边框 */
+            background: transparent; /* 透明背景 */
+        }
+
+        .main-section { /* 主内容区 */
+            flex: 1; /* 弹性填充剩余空间 */
+            padding: 10px; /* 内边距 */
+            text-align: center; /* 文字居中 */
+            display: flex; /* 弹性布局 */
+            flex-direction: column; /* 垂直方向排列 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+        }
+
+        /* 侧边栏样式 */
+        .last-update { /* 最后更新文字 */
+            font-size: 16px; /* 字体大小 */
+            color: #9999FF; /* 浅蓝色 */
+            padding: 0px; /* 内边距 */
+            text-align: left; /* 可改居中 */
+        }
+
+        .update-date { /* 更新日期 */
+            font-size: 16px; /* 字体大小 */
+        }
+
+        .menu-section { /* 菜单区块 */
+            margin: -6px 0px; /* 负外边距调整间距 */
+        }
+
+        .menu-section h3 { /* 菜单标题 */
+            font-size: 18px; /* 字体大小 */
+            color: #FFFFFF; /* 白色文字 */
+            border-top: 1px solid #FFFFFF; /* 顶部边框 */
+            padding-top: 10px; /* 顶部内边距 */
+            margin-top: 15px; /* 顶部外边距 */
+            font-weight: normal; /* 设置字体粗细为正常，避免加粗 */
+        }
+
+        .menu-section ul { /* 菜单列表 */
+            list-style: none; /* 去除列表样式 */
+        }
+
+        .menu-section li { /* 菜单项 */
+            margin: 4px 0; /* 上下外边距 */
+            position: relative; /* 相对定位 */
+            padding-left: 15px; /* 左侧内边距 */
+        }
+
+        .menu-section li::before { /* 菜单项前装饰 */
+            content: '✦'; /* 星星符号 */
+            color: #E6D8AE; /* 浅金色 */
+            position: absolute; /* 绝对定位 */
+            left: 0; /* 左侧对齐 */
+        }
+
+        .menu-section a { /* 菜单链接 */
+            font-size: 18px; /* 字体大小 */
+        }
+
+        /* 调整最后一个菜单项与边框的距离 */
+        .menu-section:last-child ul { /* 最后一个菜单的列表 */
+            margin-bottom: 5px; /* 底部外边距 */
+        }
+
+        /* 主内容区域 */
+        .title-image { /* 标题图片容器 */
+            margin-bottom: 20px; /* 底部外边距 */
+            max-width: 80%; /* 最大宽度 */
+            border: 1px solid #E6D8AE; /* 浅金色边框 */
+        }
+
+        .title-image img { /* 标题图片 */
+            max-width: 100%; /* 最大宽度100% */
+            height: auto; /* 高度自适应 */
+        }
+
+        .content-text { /* 内容文字 */
+            font-size: 18px; /* 字体大小 */
+            line-height: 1.6; /* 行高 */
+        }
+
+        /* 新闻区域 */
+        .news-section { /* 新闻区块 */
+            border: 2px solid #E6D8AE; /* 浅金色边框 */
+            padding: 10px; /* 内边距 */
+            margin-bottom: 15px; /* 底部外边距 */
+            background: transparent; /* 透明背景 */
+        }
+
+        .news-header { /* 新闻头部 */
+            margin-bottom: 10px; /* 底部外边距 */
+            display: flex; /* 弹性布局 */
+            justify-content: space-between; /* 两端对齐 */
+            align-items: center; /* 垂直居中 */
+            flex-wrap: wrap; /* 允许换行 */
+        }
+
+        .news-title { /* 新闻标题 */
+            color: gold; /* 金色文字 */
+            font-weight: bold; /* 粗体 */
+        }
+
+        .authors { /* 作者信息 */
+            font-size: 14px; /* 较小字体 */
+        }
+
+        .news-list { /* 新闻列表 */
+            display: grid; /* 网格布局 */
+            gap: 10px; /* 项间距 */
+        }
+
+        .news-item { /* 新闻项 */
+            display: flex; /* 弹性布局 */
+            font-size: 16px; /* 字体大小 */
+            color: #FFFFEE; /* 浅黄色文字 */
+        }
+
+        .news-date { /* 新闻日期 */
+            width: 80px; /* 固定宽度 */
+            text-align: right; /* 右对齐 */
+            padding-right: 10px; /* 右侧内边距 */
+            white-space: nowrap; /* 不换行 */
+            position: relative; /* 相对定位 */
+        }
+
+        .news-date::after { /* 日期后装饰 */
+            content: '✦'; /* 星星符号 */
+            color: #E6D8AE; /* 浅金色 */
+            margin-left: 5px; /* 左侧外边距 */
+        }
+
+        .news-content { /* 新闻内容 */
+            flex: 1; /* 弹性填充剩余空间 */
+        }
+
+        /* 页脚样式 */
+        footer { /* 页脚 */
+            text-align: center; /* 文字居中 */
+            margin: 10px 0; /* 上下外边距 */
+            border-top: 0px solid #E6D8AE; /* 顶部边框（宽度为0） */
+        }
+
+        .copyright { /* 版权信息 */
+            font-size: 14px; /* 较小字体 */
+        }
+
+        .orange-text { /* 橙色文字 */
+            color: #FFC53B; /* 橙色 */
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 900px) { /* 平板及以下设备 */
+            .main-content { /* 主内容容器 */
+                flex-direction: column; /* 垂直排列 */
+            }
+            
+            .sidebar { /* 侧边栏 */
+                width: 100%; /* 全宽 */
+                border-right: none; /* 去除右侧边框 */
+                border-bottom: 2px solid #E6D8AE; /* 添加底部边框 */
+            }
+            
+            .main-section { /* 主内容区 */
+                min-height: 300px; /* 最小高度 */
+            }
+            
+            header { /* 页头 */
+                flex-direction: column; /* 垂直排列 */
+            }
+            
+            .banner { /* 横幅 */
+                width: 100%; /* 全宽 */
+                border-right: none; /* 去除右侧边框 */
+                border-bottom: 2px solid #E6D8AE; /* 添加底部边框 */
+            }
+            
+            .news-header { /* 新闻头部 */
+                flex-direction: column; /* 垂直排列 */
+                align-items: flex-start; /* 左对齐 */
+                gap: 10px; /* 项间距 */
+            }
+        }
+
+        @media (max-width: 600px) { /* 手机设备 */
+            .news-item { /* 新闻项 */
+                flex-direction: column; /* 垂直排列 */
+            }
+            
+            .news-date { /* 新闻日期 */
+                width: 100%; /* 全宽 */
+                text-align: left; /* 左对齐 */
+                margin-bottom: 5px; /* 底部外边距 */
+            }
+            
+            .menu-section h3 { /* 菜单标题 */
+                font-size: 16px; /* 较小字体 */
+            }
+            
+            .menu-section a { /* 菜单链接 */
+                font-size: 16px; /* 较小字体 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"> <!-- 主容器 -->
+        <header> <!-- 页头 -->
+            <div class="banner"> <!-- 横幅区域 -->
+                 <img src=pic/banner.gif><!-- 横幅图片 -->
+            </div>
+            <div class="site-title">～乘一叶月舟、渡万顷星河。将那无法言喻的心意，化作诗行、遥寄时之彼方～</div> <!-- 网站标题文字 -->
+        </header>
+
+        <main class="main-content"> <!-- 主内容区 -->
+            <aside class="sidebar"> <!-- 侧边栏 -->
+                <div class="last-update">最后更新: <span class="update-date">2001.11.5</span></div> <!-- 最后更新信息 -->
+                
+                <div class="menu-section"> <!-- 菜单区块1 -->
+                    <h3>动漫小说:</h3> <!-- 区块标题 -->
+                    <ul> <!-- 无序列表 -->
+                        <li><a href="funfiction/koc/index.html">橙校中文版(待修复)</a></li> <!-- 列表项+链接 -->
+                        <li><a href="funfiction/eva/eva.html">EVA小说区(待修复)</a></li>
+                        <li><a href="funfiction/article/article.html">奇幻&杂文(待修复)</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section"> <!-- 菜单区块2 -->
+                    <h3>动漫歌词(待修复):</h3>
+                    <ul>
+                        <li><a href="lyric/h-n/kor.html">橙路</a></li>
+                        <li><a href="lyric/h-n/maison.html">相聚一刻</a></li>
+                        <li><a href="lyric/o-w/uy.html">福星小子</a></li>
+                        <li><a href="lyric/fullindex.html">总汇</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section"> <!-- 菜单区块3 -->
+                    <h3>杂七杂八:</h3>
+                    <ul>
+                        <li><a href="refrainblue/refrainblue.html">RefrainBlue(完成)</a></li>
+                        <li><a href="program/program.html">小程序(待修复)</a></li>
+                        <li><a href="program/legend.html">神话传说(待修复)</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section"> <!-- 菜单区块4 -->
+                    <h3>我们的收集:</h3>
+                    <ul>
+                        <li><a href="link/link.html">友情链接</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="main-section"> <!-- 主内容区块 -->
+                <div class="title-image"> <!-- 标题图片容器 -->
+                     <img src=pic/title.jpeg><!-- 标题图片 -->
+                </div>
+                <div class="content-text"> <!-- 内容文字 -->
+                    <p>一切都是二十多年前的事情了呀，就算回头，那也太久远了……</p> <!-- 段落文字 -->
+               </div>
+            </section>
+        </main>
+
+        <section class="news-section"> <!-- 新闻区块 -->
+            <div class="news-header"> <!-- 新闻头部 -->
+                <div class="news-title">❑最新更新</div> <!-- 新闻标题 -->
+                <div class="authors">----- <a href="mailto:koihime@sina.com">Zzx</a> & <a href="mailto:hstg@sohu.com">Skyi</a></div> <!-- 作者信息 -->
+            </div>
+            
+            <div class="news-list"> <!-- 新闻列表 -->
+                <div class="news-item"> <!-- 新闻项1 -->
+                    <div class="news-date">11.05</div> <!-- 新闻日期 -->
+                    <div class="news-content">(Skyi)整理RefrainBlue页面，加入elf公司的版权宣告中文版。</div> <!-- 新闻内容 -->
+                </div>
+                <div class="news-item"> <!-- 新闻项2 -->
+                    <div class="news-date">10.26</div>
+                    <div class="news-content">(Zzx)加入橙路歌词翻译一篇，最游记歌词一首(For Real)。</div>
+                </div>
+                <div class="news-item"> <!-- 新闻项3 -->
+                    <div class="news-date">10.23</div>
+                    <div class="news-content">(Skyi)加入友情链接《<a href="http://go1.163.com/kaze/index2.htm" target="_blank">回忆的街角</a>》。</div>
+                </div>
+                <div class="news-item"> <!-- 新闻项4 -->
+                    <div class="news-date">10.21</div>
+                    <div class="news-content">(zzx)让大家久等了！终于更新了小说……加入《<a href="funfiction/koc/tc/koc000-tc.html">橙校</a>》的第29回。辩解一下：本来应该放出第28回的，但因为种种内在的、外在的、懒惰的、白痴的原因（说来话长啊-_-）……第28回翻译的一直没能完成，所以也没能及时贴出。好在第28回并没有牵扯到太多前后关系，就留待日后再补吧……</div>
+                </div>
+            </div>
+        </section>
+
+        <footer> <!-- 页脚 -->
+            <div class="copyright"> <!-- 版权信息 -->
+                Copyright&copy; <span class="orange-text">橙色流星</span> 2001-2026. SITE DESIGN and PRODUCED by <a href="our.html">Orangestar Studio</a>. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
