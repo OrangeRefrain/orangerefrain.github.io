@@ -41,7 +41,7 @@ a:hover {
 
 /* 头部样式 */
 header {
-    border: 2px solid #E6D8AE;
+    border: 0px solid #E6D8AE;
     margin: 20px 0;
     display: flex;
     background: transparent;
