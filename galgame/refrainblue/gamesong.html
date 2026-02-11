@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- HTML根元素，设置语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式视口设置 -->
+    <title>RefrainBlue</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="/style.css">
+
+	<style>
+	.letter {
+		line-height: 1.9;
+		font-size: 16px;
+	}
+
+	.letter .jp {
+		font-weight: bold;
+		display: block;
+	}
+
+	.letter .cn {
+		display: block;
+		margin-bottom: 18px;
+	}
+	</style>
+
+</head>
+
+<body>
+    <!-- 加载页头页脚的JavaScript -->
+    <script>
+        // 加载页头
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // 加载页脚
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container"> <!-- 主容器 -->
+        <div id="header-container"></div> <!-- 页头加载 -->
+
+		<main class="main-content"> <!-- 主内容区 -->
+            <section class="main-section"> <!-- 主内容区块 -->
+
+		    <div class="ArticleText" style="max-width:800px;margin:20px;">
+            <img src="pic/title.gif">
+			<hr style="margin:20px 0; border-top:1px solid #E6D8AE;">
+            <img width=100% src="pic/ending.jpg"><br><br>
+
+			<div class="letter">
+				<span class="jp">空の涙も　いつかは海に</span>
+				<span class="cn">天空的泪水终有一天会汇入大海</span>
+				<span class="jp">変わっていくのね　美しく澄んで</span>
+				<span class="cn">渐渐改变着美丽而澄澈</span>
+
+				<span class="jp">悲しい記憶が　溢れて消える</span>
+				<span class="cn">悲伤的记忆满溢而出　悄然消散</span>
+				<span class="jp">癒されていく　透き通った BLUE...</span>
+				<span class="cn">被治愈的　是那透明澄净的蓝……</span>
+
+				<span class="jp">水面に映った　遠い愛の欠片　愛しい幻…</span>
+				<span class="cn">远方爱的碎片倒映在水面　甜美的幻景……</span>
+
+				<span class="jp">寄せては返す　波に抱かれて</span>
+				<span class="cn">萦回流连　被波涛拥抱</span>
+				<span class="jp">想い出の海　還れるのね</span>
+				<span class="cn">终于　能回到那片回忆之海</span>
+
+				<span class="jp">水面に映った　遠い愛の欠片　愛しい幻…</span>
+				<span class="cn">远方爱的碎片倒映在水面　甜美的幻景……</span>
+
+				<span class="jp">水平線の　彼方に光る</span>
+				<span class="cn">在地平线彼端闪耀</span>
+				<span class="jp">想い出の海　導かれて</span>
+				<span class="cn">被回忆之海所引领</span>
+
+				<span class="jp">寄せては返す　波に抱かれて</span>
+				<span class="cn">萦回流连　被波涛拥抱</span>
+				<span class="jp">想い出の海　還れるのね</span>
+				<span class="cn">终于　能回到那片回忆之海</span>
+			</p>
+
+			</div>
+
+			<hr style="width:60%; margin:20px auto; border:none; border-top:1px solid #E6D8AE;">
+			<p class=ArticleMemo align="center">翻译：GPT/Deepseek　整理：AKI，2026-1-19 22:25</p>
+
+			</section>
+        </main>
+
+		<!-- 页脚通过JavaScript加载 -->
+        <div id="footer-container"></div>
+    </div>
+
+</body>
+</html>
