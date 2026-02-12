@@ -1,0 +1,155 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- HTML根元素，设置语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式视口设置 -->
+    <title>RefrainBlue</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="/style.css">
+
+	<style>
+	.letter {
+		line-height: 1.9;
+		font-size: 16px;
+	}
+
+	.letter .jp {
+		font-weight: bold;
+		display: block;
+		color: #00CCFF;
+	}
+
+	.letter .cn {
+		display: block;
+		margin-bottom: 18px;
+	}
+	</style>
+
+</head>
+
+<body>
+    <!-- 加载页头页脚的JavaScript -->
+    <script>
+        // 加载页头
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // 加载页脚
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container"> <!-- 主容器 -->
+        <div id="header-container"></div> <!-- 页头加载 -->
+
+		<main class="main-content"> <!-- 主内容区 -->
+            <section class="main-section"> <!-- 主内容区块 -->
+
+		    <div class="ArticleText" style="max-width:750px;margin:20px;">
+            <a href="refrainblue.html"><img src="pic/title.gif" alt="RefrainBlue"></a>
+			<hr style="margin:20px 0; border-top:1px solid #E6D8AE;">
+            <img width=100% src="pic/masato.jpg"><br><br>
+			<div class="letter" align=left>
+				<span class="jp">《Refrain Blue》的剧本与游戏设计</span>
+				<span class="cn">
+				　　负责《Refrain Blue》剧本与游戏设计的，是以本作为出道作的茂原雅人先生。<br>
+				　　过去一直不太清楚他是怎样的一位人物，不过在 MediaWorks 出版的《电击姬 VOL-8》中，刊登了长达 6 页的专访。<br>
+				　　以下内容包含从《电击姬 VOL-8》中摘录引用的部分。
+				</span>
+				<span class="jp">★ 最初只有 4 位女主角 ★</span>
+				<span class="cn">
+				　　据说这个企划最初是以门井亚矢的角色设计为先行展开的。茂原先生是在这些角色设计的基础上，逐步构筑整体形象的。<br>
+				　　最令人感兴趣的是——最初的角色只有千夏、雫、奈绪、深景四人。也就是说，在那个阶段还没有“つぐみ”“由织”以及“谜之少女”。<br>
+				　　如果没有加入这些角色就完成了《Refrain Blue》，那一定会成为一部印象截然不同的作品吧。尤其是如果没有“谜之少女”的登场……嗯，简直难以想象。<br>
+				　　另外，这部作品最初是以 AVG（冒险游戏）形式构想的。
+				</span>
+
+				<span class="jp">★ 说到底是一部“单一的长篇故事” ★</span>
+				<span class="cn">
+				　　茂原先生在本作中特别执着于数字“7”。因为是第七个夏天，所以希望有七个人物。<br>
+				　　于是便有了：千夏、奈绪、つぐみ、由织、雫、深景、谜之少女——七人齐聚。<br>
+				　　接着他谈到，本作本质上是一部围绕主人公与深景展开的单一故事。所有剧情的背景都围绕深景的故事展开，各条路线也是为了最终引向那个故事而设计的，因此在某种程度上，通关顺序是被设定好的。<br>
+				　　他也提到，如果抱着“多结局恋爱游戏”的期待来购买，可能会有落空的感觉。<br>
+				　　或许正因为这一点，《Refrain Blue》的评价才会像我这样认为“非常优秀”的人，与觉得“令人失望”的人两极分化。<br>
+				　　另外，在除深景路线之外的结局画面中会出现“To be continued…”的字样，这个点子其实并非茂原先生提出的。<br>
+				　　确实，如果没有通关深景路线就结束游戏，会显得非常不上不下。毕竟，作为真正的 True Ending，若没有通关深景路线，可以说这款游戏就失去了意义。
+				</span>
+
+				<span class="jp">★ 雫凝视大海的场景，是故事的起点 ★</span>
+				<span class="cn">
+				　　据说本作最初的灵感来源，是“雫凝视大海”的场景。小说方面受新井素子的《Green Requiem》影响；电影方面则参考了北野武的《那年夏天，最宁静的海》。<br>
+				　　也正因如此，茂原先生个人最喜欢的角色是雫。<br>
+				　　仔细想想，踏入深景作画的那片岬角的，只有雫一人。<br>
+				　　而且雫路线的剧情，也是进入深景路线前的重要高潮。<br>
+				　　茂原先生表示，他在雫路线中最投入感情写作的，是雫在梦中回忆童年的那一段。<br>
+				　　确实，那一段深刻传达了雫悲伤而真切的情感。<br>
+				　　顺带一提，在那一段中雫唱的是：<br>
+				　　♪ かーもめ、かもめ<br>
+				　　原本应为“かごめ（篭目）”。“篭目”具有与“九字切”“五芒星”“六芒星”类似的辟邪含义。<br>
+				　　荒俣宏的《帝都物语》中对此有详细说明，有兴趣的读者可以参考。<br>
+				　　此外，茂原先生个人喜欢的另一个场景，是与谜之少女一起前往“海之国”，出现大象的那一幕。他说自己很喜欢那种带有幻想气息的氛围。
+				</span>
+				<span class="jp">★ 关于由织的特别之处 ★</span>
+				<span class="cn">
+				　　这里最有趣的是关于由织的部分。由织的故事明显与其他角色的风格不同。<br>
+				　　总结来说——<br>
+				　　关于由织为何会出现在那片海岸，他并不想解释得太清楚，而且刻意不让她成为那种与主人公过去经历相互重叠的角色。<br>
+				　　如果这样理解的话，由织路线中那些曾经令人困惑的部分，似乎就变得清晰了。
+				</span>
+				<span class="jp">★ 剧本始终由一人完成 ★</span>
+				<span class="cn">
+				　　剧本制作周期约一年，真正动笔写作大约 5 个月。<br>
+				　　之所以由一人执笔，是因为 Elf 社长蛭田氏也是这种创作方式；而且单人创作更能保证故事的一贯性。<br>
+				　　本作的一切象征都是“海”。在茂原先生脑海中构想的各种创意，通过“海”这个舞台被串联起来。<br>
+				　　不过，关于“七夕”的构想却没有详细提及，这一点略显遗憾。毕竟《Refrain Blue》正是因为“蜻蛉海岸”这个舞台，以及七夕传说这一重要伏笔，才得以成立。<br>
+				　　如果能听到更多关于这一部分的想法就好了。
+				</span>
+				<span class="jp">★ 女主角们也与主人公一起做梦 ★</span>
+				<span class="cn">
+				　　这恐怕是整场采访的核心。<br>
+				　　虽然这部作品本质上是主人公与深景的故事，但各位女主角的剧情并非单纯的伏笔。<br>
+				　　那是一种“围绕命运、经历不同人生的可能性”的思考。深景最终离去，是为了保留这种可能性。而且，主人公与每位女主角的相遇，对他而言都具有重要意义。<br>
+				　　在深景路线中，当主人公与深景的命运之线被织姬剪断之后，与其他女主角的对话正体现了这一点。这正是《Refrain Blue》区别于一般多结局恋爱游戏的独特之处。<br>
+				　　茂原先生今后仍将坚持的主题是：<br>
+				　　<font color=00EEFF><b><i>时间、命运、想念（心意）</i></b><br></font>
+				　　《Refrain Blue》正是围绕这三点展开，带来了深刻的感动。<br>
+				　　关于主人公与深景的新婚生活场景——那是出于一种愿望：希望存在“他们也可能拥有幸福命运”的可能性。那是主人公的梦或幻想。<br>
+				　　但有趣的是——不仅主人公在做这个梦，深景也在做同一个梦。<br>
+				　　此外，这里也解开了由织之梦的谜团。<br>
+				　　主人公并未在过去真正与由织相遇；他只是出现在由织的梦中，扮演了那个男孩的角色。本意是想通过主人公与由织之梦的重叠，暗示后来主人公与深景之梦的重叠。<br>
+				　　但他也反省说，这一设计实际上有些难以理解。
+				</span>
+				<span class="jp">★ 目标是制作 RPG ★</span>
+				<span class="cn">
+				　　茂原先生在制作《Refrain Blue》之前，只是普通大学毕业后进入 Elf 工作。<br>
+				　　当时公司招聘游戏设计师只限有经验者；但剧本作者可以无经验。<br>
+				　　他既负责剧本又负责游戏设计，想必也具备程序知识。这样一位完全的新人，却创作出如此优秀的作品，实在令人惊讶。<br>
+				　　与某些老牌大厂近年来粗制滥造、口碑下降相比，Elf 在人才培养方面确实值得称道。<br>
+				　　茂原先生作为创作者的目标，是制作一款可以长时间游玩的模拟 RPG。坦率说，这一点让我有些意外。不过也说明他并非只有《Refrain Blue》这一种风格，未来可期。<br>
+				　　最令人关心的是他的下一部作品。虽然未透露细节，但他说希望能做一部更有起伏、更多葛藤的作品。令人非常期待。不过大概得排在《鬼作》或《同级生3》之后吧？<br>
+				　　采访最后，他以一句话收尾：<br>
+				　　“我认为自己已经尽了最大努力。”<br>
+				　　读完这次访谈，那些曾经难以理解的部分终于变得清晰。同时也更加震惊——这竟然是他的出道作。<br>
+				　　还没买《电击姬 VOL-8》的《Refrain Blue》粉丝们，如果还能找到旧刊，一定要买啊（笑）。<br>
+				</span>
+				<span class="jp">★ 昙花一现 ★</span>
+				　　（AKI）就和月下美人惊艳绽放后旋即消逝一样，《Refrain Blue》是茂原雅人的第一部也是最后一部作品，后续再无新作推出，他本人也销声匿迹了，X上都找不到……真是令人遗憾……
+				<span class="cn">
+
+			<hr style="width:100%; border:none; border-top:1px solid #E6D8AE; margin:15px 0;">
+			<p class=ArticleMemo align="center">原作：HIDEMAN（日）　翻译：GPT　整理：AKI，2026-2-12 19:24</p>
+
+			</section>
+        </main>
+
+		<!-- 页脚通过JavaScript加载 -->
+        <div id="footer-container"></div>
+    </div>
+
+</body>
+</html>

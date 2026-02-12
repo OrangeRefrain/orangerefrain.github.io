@@ -1,0 +1,124 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- HTML根元素，设置语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式视口设置 -->
+    <title>RefrainBlue</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="/style.css">
+
+	<style>
+	.letter {
+		line-height: 1.9;
+		font-size: 16px;
+	}
+
+	.letter .jp {
+		font-weight: bold;
+		display: block;
+		color: #00CCFF;
+	}
+
+	.letter .cn {
+		display: block;
+		margin-bottom: 18px;
+	}
+	</style>
+
+</head>
+
+<body>
+    <!-- 加载页头页脚的JavaScript -->
+    <script>
+        // 加载页头
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // 加载页脚
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container"> <!-- 主容器 -->
+        <div id="header-container"></div> <!-- 页头加载 -->
+
+		<main class="main-content"> <!-- 主内容区 -->
+            <section class="main-section"> <!-- 主内容区块 -->
+
+		    <div class="ArticleText" style="max-width:750px;margin:20px;">
+            <a href="refrainblue.html"><img src="pic/title.gif" alt="RefrainBlue"></a>
+			<hr style="margin:20px 0; border-top:1px solid #E6D8AE;">
+            <img width=100% src="pic/aya.jpg"><br><br>
+			<div class="letter" align=left>
+				<span class="jp">《Refrain Blue》的剧本与游戏设计</span>
+				<span class="cn">
+				　　本次负责角色设定与原画的是门井亚矢。<br>
+				　　玩过 Elf 游戏的人应该都知道，她此前也担任过《下级生》的原画。<br>
+				　　在《Refrain Blue》发售的同一天，MediaWorks 出版了《电击姬 Special ～整本都是 Elf 大特集～》。<br>
+				　　其中刊登了门井亚矢的专访，以及《Refrain Blue》的原画与设定稿，共 12 页。以下内容包含摘自该特刊的部分引用。
+				</span>
+				<span class="jp">★ Elf 首部小说型作品完成 ★</span>
+				<span class="cn">
+				　　她表示，这一年几乎都在为《Refrain Blue》而忙碌。<br>
+				　　“《Refrain》相比《下级生》女孩子人数少一些，所以角色之间的形象不会重叠。”<br>
+				　　不过，她也担心角色是否能与剧本形象契合。但据说有些时候也是“画完就直接硬塞过去”的（笑）。<br>
+				　　另外，她不仅负责原画，还亲自检查所有上色后的 CG。这虽然是理所当然的事，但正因为这种严格把关，才诞生了那样高质量的 CG。<br>
+				　　当然，想必她在制作过程中也非常严格——<br>
+				　　这或许也是门井亚矢偶尔会有一些负面评价的原因吧？不过从玩家的角度来看，正是这种严谨，才让我们遇到如此优秀的作品。
+				</span>
+				<span class="jp">★ 人气角色诞生的幕后？ ★</span>
+				<span class="cn">
+				　　对门井来说，《Refrain Blue》是继《下级生》之后第二次担任游戏原画。关于这次创作中费心与困难的部分，她这样说道：<br>
+					<font color=00EEFF><i>
+				　　♪ 这次难画的不是脸，而是发型。<br>
+				　　♪ 因为外形上都是比较普通的女孩，反而在这些细节上很费心。<br>
+				　　♪ 而且《下级生》里已经有 13 个角色，不能让形象重叠。<br>
+				　　♪ 但我习惯画的发型在《下级生》时就已经固定下来了。<br>
+				　　♪ 所以适应新感觉花了不少时间。<br>
+				　　♪ 还有立绘数量很多，有的表情相同但姿势不同，自己画到后来都搞不清楚了。<br>
+				　　♪ 不过正因为这样，细微的表情变化和眼神变化都做得很好，<br>
+				　　♪ 所以希望大家能特别关注立绘。<br></i></font>
+				　　确实，立绘非常出色。虽然没有配合台词做嘴型开合或眨眼的效果，但在对话过程中，细致的表情与姿势变化，对心理描写起到了非常有效的作用。<br>
+				　　接下来，她对各个角色做了评论，这部分也很有意思。<br>
+					<font color=00EEFF><i>
+				　　♪ 我自己最喜欢雫，会偏心一点。<br>
+				　　♪ “安静的女孩”这个形象很明确，所以很好发挥，表情也容易画。<br>
+				　　♪ 千夏有点孩子气……<br>
+				　　♪ 不是幼儿体型，但“没什么胸部”这一点意外地难画。<br>
+				　　♪ 奈绪为了增加反差，我把头发画成粉色。<br>
+				　　♪ 不过头发是粉色的角色，通常都是萝莉角色吧？<br>
+				　　♪ 奈绪完全不萝莉，我还担心会不会有问题。<br>
+				　　♪ 由织的话，就像以前真歩子很受欢迎一样，<br>
+				　　♪ 那种“ほよ～”的天然性格大概会受欢迎吧。<br>
+				　　♪ つぐみ一开始画的是那种很多蕾丝的风格，结果被说“不是那种感觉”，只好作废。<br>
+				　　♪ 但还是想加入可以发挥的地方，所以给她设计了有点夸张的服装。<br>
+				　　♪ 深景的话……她的脸不太常出现，但一旦出现就要美。<br>
+				　　♪ 如果露出脸时不能让人觉得“啊，好开心”，那就没意义了。<br>
+				　　♪ 所以我非常努力地控制“不要露脸、不要露脸”。</i></font><br>
+				
+				　　正如剧本作者茂原先生最喜欢雫一样，门井小姐最喜欢的也是雫。<br>
+				　　至于深景那部分——<br>
+				　　我完全中了门井小姐的“计”。那一幕，背光之中一直看不清表情，然后突然脸清晰地显现出来——<br>
+				　　真的非常棒。<br>
+				　　顺带一提，我电脑的桌面壁纸就是那张 CG。<br>
+				　　我个人最喜欢的场景，是雫路线中，主人公与深景在海边互相泼水的那一幕。<br>
+				　　一向给人安静、静态印象的深景，在那一刻被描绘得非常动态，仿佛真心享受着与主人公共度的夏日时光。<br>
+				　　正因为之后的结局，那一幕才会深深留在心里，也因此显得格外悲伤。
+				</span>
+			<hr style="width:100%; border:none; border-top:1px solid #E6D8AE; margin:15px 0;">
+			<p class=ArticleMemo align="center">原作：HIDEMAN（日）　翻译：GPT　整理：AKI，2026-2-12 19:24</p>
+
+			</section>
+        </main>
+
+		<!-- 页脚通过JavaScript加载 -->
+        <div id="footer-container"></div>
+    </div>
+
+</body>
+</html>
