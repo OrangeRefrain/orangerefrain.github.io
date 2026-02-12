@@ -1,0 +1,155 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- HTML根元素，设置语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式视口设置 -->
+    <title>RefrainBlue</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="/style.css">
+
+	<style>
+	.letter {
+		line-height: 1.9;
+		font-size: 16px;
+	}
+
+	.letter .jp {
+		font-weight: bold;
+		display: block;
+	}
+
+	.letter .cn {
+		display: block;
+		margin-bottom: 18px;
+	}
+	</style>
+
+</head>
+
+<body>
+    <!-- 加载页头页脚的JavaScript -->
+    <script>
+        // 加载页头
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // 加载页脚
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container"> <!-- 主容器 -->
+        <div id="header-container"></div> <!-- 页头加载 -->
+
+		<main class="main-content"> <!-- 主内容区 -->
+            <section class="main-section"> <!-- 主内容区块 -->
+
+		    <div class="ArticleText" style="width:750px;margin:20px;">
+            <img src="pic/title.gif">
+			<hr style="margin:20px 0; border-top:1px solid #E6D8AE;">
+			<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=617363684&bvid=BV1W84y1o7ry&cid=1235504992&p=1" style="width:100%; aspect-ratio:16/9;" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+			<hr style="margin:20px 0; border-top:1px solid #E6D8AE;">
+
+			<div class="letter">
+				<span class="jp">耳をすませば<br>
+					作詞：Atsuko<br>
+					作曲：Park Jin<br>
+					编曲：岩崎文紀<br>
+					歌：岡本ひかり
+				</span>
+				<hr style="width:40%; margin:20px auto; border:none; border-top:1px dashed #E6D8AE;">
+
+					<span class="jp">どこまでも続く　まばゆい海原<br>
+					果てしない　時を巡り</span>
+					<span class="cn">耀眼的大海　连绵到天边<br>
+					永无止境　时光不断流转</span>
+
+					<span class="jp">光が差し込む　色づく渚は<br>
+					明日へと　行方照らす</span>
+					<span class="cn">阳光照射而入　染上色彩的海滨<br>
+					向着明天　照亮前行的方向</span>
+
+					<span class="jp">そんな　みんなの声も<br>
+					耳をすませば　届くように</span>
+					<span class="cn">那样　大家的声音<br>
+					侧耳倾听　仿佛就能听到</span>
+
+					<span class="jp">ほらね　ゆらゆらと　夢を運ぶ風の音が<br>
+					すぐそこであなたへと　優しく微笑んで</span>
+					<span class="cn">你看　轻轻摇曳着　传递梦想的风声<br>
+					就在那附近向你　温柔地微笑</span>
+
+					<span class="jp">ごらん　きらきらと　夜明けを待つ星屑も<br>
+					呼んでるの　いつだって一人じゃないと</span>
+					<span class="cn">你看　闪闪发光的　等待黎明的星尘<br>
+					也正在呼唤着　说你无论何时都不是一个人</span>
+
+					<span class="jp">遥かに広がる　見上げた青空<br>
+					限りない　自由越えて</span>
+					<span class="cn">仰望向远方延展的蓝天<br>
+					漫无边际　自由超越</span>
+
+					<span class="jp">水面に揺れてる　小さな草花<br>
+					伸びやかに　息を吸って</span>
+					<span class="cn">在水面上摇曳的　小小的野花<br>
+					舒展的　吸一口气</span>
+
+					<span class="jp">遠く　あなたの友が<br>
+					耳をすませば　誘うように</span>
+					<span class="cn">远方　你的朋友<br>
+					只要侧耳倾听　仿佛在邀请你</span>
+
+					<span class="jp">ほらね　ひらひらと　愛を唄う花の音が<br>
+					どこからもあなたへと　無数に語りかけ</span>
+					<span class="cn">你看　轻轻飘动着　歌唱爱的花之声<br>
+					从四面八方向你　无数次地诉说</span>
+
+					<span class="jp">ごらん　そよそよと　空を泳ぐ鳥たちも<br>
+					囁くの　誰だって淋しくないと</span>
+					<span class="cn">你看　轻轻拂动着　在天空中飞翔的鸟儿们<br>
+					低声细语着　谁都不会孤单</span>
+
+					<span class="jp">（*台词）<br>
+					永遠に続く悲しみなんて<br>
+					何処にもありはしない</span>
+					<span class="cn">所谓永远持续的悲伤<br>
+					在任何地方都不存在</span>
+
+					<span class="jp">幸せを呼ぶ鳥たちが<br>
+					ほら　あなたのすぐそこに</span>
+					<span class="cn">呼唤幸福的鸟儿们<br>
+					看　就在你的身旁</span>
+
+					<span class="jp">もう　怖れないで　さぁ</span>
+					<span class="cn">已经不再害怕了　来吧<br>
+					（*台词）</span>
+
+
+					<span class="jp">ほらね　ゆらゆらと　夢を運ぶ風の音が<br>
+					すぐそこであなたへと　優しく微笑んで</span>
+					<span class="cn">你看　轻轻摇曳着　传递梦想的风声<br>
+					就在那附近向你　温柔地微笑</span>
+
+					<span class="jp">ごらん　きらきらと　夜明けを待つ星屑も<br>
+					呼んでるの　いつだって一人じゃないと</span>
+					<span class="cn">你看　闪闪发光的　等待黎明的星尘<br>
+					也正在呼唤着　说你无论何时都不是一个人</span>				
+			</div>
+
+			<hr style="width:40%; margin:20px auto; border:none; border-top:1px solid #E6D8AE;">
+			<p class=ArticleMemo align="center">翻译：GPT/Deepseek　整理：AKI，2026-2-11 22:25</p>
+
+			</section>
+        </main>
+
+		<!-- 页脚通过JavaScript加载 -->
+        <div id="footer-container"></div>
+    </div>
+
+</body>
+</html>
